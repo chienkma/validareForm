@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;300;500;600&display=swap");
+:root {
+  --success-color: #99d6ff;
+  --error-color: red;
+  --text-color: #666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: linear-gradient(#0066cc, #ff471a);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.container {
+  width: 500px;
+  background: white;
+  border-radius: 10px;
+}
+.container h1 {
+  text-align: center;
+  font-size: 20px;
+  background: white;
+  width: 500px;
+  height: 30px;
+  margin-top: 30px;
+}
+.form {
+  padding: 30px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+.form-text {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+.form-control {
+  position: relative;
+}
+.form-control input {
+  width: 90%;
+  outline: none;
+  height: 30px;
+  border: 1px solid #dadada;
+}
+
+.form-control span {
+  position: absolute;
+  border-bottom: 3px solid var(--success-color);
+  width: 0;
+  left: 0;
+  top: 28px;
+  transition: 0.5s;
+}
+.form-control input:focus ~ span {
+  width: 90%;
+}
+.form-control.error small {
+  color: var(--error-color);
+}
+.form-control.error input {
+  border-bottom: 2px solid var(--error-color);
+}
+.form-select {
+  margin: 30px 0;
+}
+.form-select-day {
+  display: flex;
+
+}
+.form-select h5 {
+  color: var(--text-color);
+  width: 20%;
+}
+.form-select #birthday {
+  float: right;
+  width: 70%;
+  outline: none;
+  border: 1px solid #dadada;
+  margin: -20px 0;
+}
+.form-select small {
+  padding: 0 136px;
+  color: var(--error-color);
+}
+.form-select .checkbox-gender {
+  color: var(--text-color);
+  display: flex;
+  justify-content: start;
+  gap: 30px;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+#gender-male{
+  display: flex;
+  gap: 10px;
+}
+#gender-female{
+  display: flex;
+  gap: 10px;
+}
+#message-error {
+  padding: 0;
+}
+.form-pos h5 {
+  color: var(--text-color);
+}
+.form-pos select {
+  width: 100%;
+  outline: none;
+  margin-top: 10px;
+  cursor: pointer;
+  border: 1px solid #dadada;
+}
+.form-introduce {
+  margin: 30px 0;
+}
+.form-introduce label {
+  color: var(--text-color);
+  float: left;
+}
+.form-introduce textarea {
+  outline: none;
+  resize: none;
+  height: 50px;
+  width: 440px;
+  margin-top: 10px;
+  border: 1px solid #dadada;
+}
+.form-introduce.error small {
+  color: var(--error-color);
+}
+.form-introduce.error input {
+  border-bottom: 2px solid var(--error-color);
+}
+#submit {
+  padding: 10px 66px;
+  background: var(--success-color);
+  border-radius: 20px;
+  transform: translateX(66%);
+  align-items: center;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#submit:hover {
+  background: #08609a;
+}
+.signup-link {
+  margin: 0 0 30px;
+  text-align: center;
+}
+.signup-link a {
+  color: blue;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.signup-link a:hover {
+  text-decoration: underline;
+}
+table, th{
+  padding: 0 20px;
+  border: 2px solid black;
+  border-collapse: collapse;
+  color: white;
+  margin-top: -50%;
+  flex-grow: 1;
+}
+td {
+  text-align: center;
+}

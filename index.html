@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validate-Form</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="title">Register</h1>
+      <form class="form">
+        <div class="form-text">
+          <div class="form-control">
+            <input id="username" type="text" placeholder="User name" />
+            <small></small>
+            <span></span>
+          </div>
+          <div class="form-control">
+            <input id="email" type="text" placeholder="Email" />
+            <small></small>
+            <span></span>
+          </div>
+          <div class="form-control">
+            <input id="password" type="password" placeholder="Password" />
+            <small></small>
+            <span></span>
+          </div>
+          <div class="form-control">
+            <input
+              id="re-password"
+              type="password"
+              placeholder="Retype Password"
+            />
+            <small></small>
+            <span></span>
+          </div>
+        </div>
+        <div class="form-select">
+          <h5>Birth Day</h5>
+          <input type="date" id="birthday" />
+          <small></small>
+        </div>
+        <div class="form-select">
+          <h5>Gender</h5>
+          <div class="checkbox-gender">
+            <div id="gender-male">
+              <label for="male">Male</label>
+              <input type="radio" name="gender" id="male" value="Male" />
+            </div>
+            <div id="gender-female">
+              <label for="female">Female</label>
+              <input type="radio" name="gender" id="female" value="Female" />
+            </div>
+            <small id="message-error"></small>
+          </div>
+        </div>
+        <div class="form-pos">
+          <h5>Position</h5>
+          <select name="pos" id="pos">
+            <option value="Developer">Developer</option>
+            <option value="Project Manager">Project Manager</option>
+            <option value="Business Alliance">Business Alliance</option>
+          </select>
+        </div>
+        <div class="form-introduce">
+          <label for="intro">Introduce yourself</label>
+          <textarea id="intro"></textarea>
+          <small></small>
+          <span></span>
+        </div>
+        <input type="submit" name="submit" id="submit" value="Register" />
+      </form>
+      <div class="signup-link">
+        <span>Not a member? </span>
+        <a href="#">Log In</a>
+      </div>
+    </div>
+    <table class="table" border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Birthday</th>
+          <th>Gender</th>
+          <th>Position</th>
+          <th>Introduce</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody class="user_list"></tbody>
+    </table>
+  </body>
+  <script src="index.js"></script>
+</html>
